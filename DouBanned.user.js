@@ -10,5 +10,7 @@
 // @grant        none
 // ==/UserScript==
 
-var target = document.getElementsByClassName(" market1111")[0];
-target.className = "";
+var target0 = document.getElementsByClassName(" market1111")[0];
+var target1 = document.getElementsByClassName(" market-tip")[0];
+target0.className = "";
+target1.className = "";
