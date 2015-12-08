@@ -11,3 +11,15 @@
 // ==/UserScript==
 
 // NOT FUNCTIONING NOW
+
+var cid = function(){
+	src = document.querySelector('#bofqi object param[name="flashvars"]').getAttribute('value');
+    cid = Number(src.match(/cid=(\d+)/)[1]);
+	return cid;
+}
+
+var parent = document.querySelector('.v-title-info');
+var downloadButton = document.createElement('div');
+downloadButton.className = 'v-title-line';
+downloadButton.innerHTML('<span><a href="'+'http://comment.bilibili.com/{{cid}}.xml'.replace('{{cid}}', cid)+'">XML</a></span>')
+parent.insertBefore(downloadButton,parent.childNodes)[3];
